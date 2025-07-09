@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QR Code Reader</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+</head>
+<body>
+
+<h1>QR Code Reader</h1>
+
+<nav>
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="generator.html" class="nav-link">Go to Generator</a>
+</nav>
+
+<label for="readFileInput">Upload image or video:</label>
+<input type="file" id="readFileInput" accept="image/*,video/*" />
+
+<p><strong>Decoded text:</strong> <span id="resultText">---</span></p>
+
+<canvas id="readerCanvas" hidden></canvas>
+<video id="videoPlayer" controls hidden></video>
+
+<script src="reader.js"></script>
+</body>
+</html>
