@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QR Code Generator</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.0/build/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+</head>
+<body>
+
+<h1>QR Code Generator</h1>
+
+<nav>
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="reader.html" class="nav-link">Go to Reader</a>
+</nav>
+
+<label for="qrText">Enter text:</label>
+<input type="text" id="qrText" placeholder="Enter text to generate QR code" />
+
+<button id="generateTextBtn">Generate QR from Text</button>
+
+<label for="genFileInput">Upload image or video (to generate QR from content):</label>
+<input type="file" id="genFileInput" accept="image/*,video/*" />
+<button id="generateFromFileBtn" disabled>Generate QR from File</button>
+
+<canvas id="qrCanvas"></canvas>
+
+<script src="generator.js"></script>
+</body>
+</html>
